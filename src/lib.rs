@@ -1,6 +1,5 @@
 // Implement extract_tx_version function below
 pub fn extract_tx_version(raw_tx_hex: &str) -> Result<u32, String> {
-    
     hex::decode(raw_tx_hex)
         .map_err(|_| "Hex decode error".to_string())
         .and_then(|bytes| {
